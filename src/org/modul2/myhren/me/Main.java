@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Main {
 	
+	//Amount of money you have
 	static int myMoney = 50; 
+	//Value that is not important and never used
+	static int cheatMoney = 100;
 	
 	//Scanner initialisation
 	static Scanner scanner = new Scanner(System.in);
@@ -14,14 +17,16 @@ public class Main {
 	static HashMap<String, Integer> items = new HashMap<String, Integer>() {{
 		put ("apple", 10);
 		put ("newspaper", 20);
-		put ("veganfood", 60);
-		
+		put ("veganfood", 150);
+		put ("airplaneticket", 140);
+		put ("waterbottle", 1);
 	}};
 	
 	//Entry point
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Happy Shop! Is there anything you would like to purchase?");
-		System.out.println("Available commands are: list, money and exit.");
+		System.out.println("--------------------------------------------------------------------------");
+		System.out.println("Available commands are: list, money, motherlode and exit.");
 		
 		//Loops while waiting for user input
 		while(true) {
@@ -41,6 +46,13 @@ public class Main {
 			if (purchaseItem.equalsIgnoreCase("exit")) {
 				scanner.close();
 				System.exit(0);
+			}
+			
+			if (purchaseItem.equalsIgnoreCase("motherlode")) {
+				myMoney += cheatMoney;
+				System.out.println(cheatMoney + "$ " + "was added to your balance.");
+				printMoney(); 
+				continue; 
 			}
 			
 			//Makes the input lowercase, so you can write item however you want
