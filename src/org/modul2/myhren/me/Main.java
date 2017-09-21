@@ -19,7 +19,10 @@ public class Main {
 		put ("newspaper", 20);
 		put ("veganfood", 150);
 		put ("airplaneticket", 140);
-		put ("waterbottle", 1);
+		put ("waterbottle", 5);
+		put ("coffee", 10);
+		put ("a single grape", 900);
+		put ("majoras mask", 8000);
 	}};
 	
 	//Entry point
