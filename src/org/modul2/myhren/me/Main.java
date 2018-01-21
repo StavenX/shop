@@ -14,7 +14,12 @@ public class Main {
 	static Scanner scanner = new Scanner(System.in);
 	
 	//Initialises HashMap, where the item name is the key, and the cost is the value
-	static HashMap<String, Integer> items = new HashMap<String, Integer>() {{
+	static HashMap<String, Integer> items = new HashMap<String, Integer>() {/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+	{
 		put ("apple", 10);
 		put ("newspaper", 20);
 		put ("veganfood", 150);
